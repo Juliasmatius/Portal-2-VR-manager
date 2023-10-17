@@ -32,7 +32,7 @@ ECHO 3 - Launch game
 echo 4 - Configure
 ECHO 5 - Exit
 ECHO.
-SET /P M=Type 1, 2, 3, or 4 then press ENTER: 
+SET /P M=Type 1, 2, 3, 4, or 5 then press ENTER: 
 IF %M%==1 GOTO enable
 IF %M%==2 GOTO disable
 IF %M%==3 GOTO launch
@@ -50,12 +50,14 @@ echo Currently %dlcfolder%
 set /p Input=What is your dlc folder? : 
 del manager_config.txt
 echo  %Input% >> manager_config.txt
+set /p dlcfolder=<manager_config.txt
 cd bin
 
-
+goto menu
 
 :enable
 cls
+cd bin
 echo Renaming d9d0.dll.bak to d3d9.dll
 move d3d9.dll.bak d3d9.dll
 
@@ -70,6 +72,7 @@ cd bin
 goto menu
 :disable
 cls
+cd bin
 echo Renaming d3d9.dll to d3d9.dll.bak
 move d3d9.dll d3d9.dll.bak
 
