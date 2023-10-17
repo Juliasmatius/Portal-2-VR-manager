@@ -47,6 +47,9 @@ goto menu
 cd ..
 echo Your dlc folder is where you installed the contents of portal2_dlc3
 echo Currently %dlcfolder%
+echo Please include the whole folder name including portal2_dlc<number>
+echo Example : portal2_dlc3 
+echo NOT just 3
 set /p Input=What is your dlc folder? : 
 del manager_config.txt
 echo  %Input% >> manager_config.txt
@@ -65,6 +68,7 @@ echo Renaming openvr_api.dll.bak to openvr_api.dll
 move openvr_api.dll.bak openvr_api.dll
 cd ..
 cd %dlcfolder%
+echo Renaming pak01_dir.vpk.bak to pak01_dir.vpk
 move pak01_dir.vpk.bak pak01_dir.vpk
 cd ..
 cd bin
@@ -81,6 +85,7 @@ move openvr_api.dll openvr_api.dll.bak
 
 cd ..
 cd %dlcfolder%
+echo Renaming pak01_dir.vpk to pak01_dir.vpk.bak
 move pak01_dir.vpk pak01_dir.vpk.bak
 cd ..
 cd bin
