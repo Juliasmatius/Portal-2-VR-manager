@@ -46,6 +46,7 @@ goto menu
 :configure
 cd ..
 echo Your dlc folder is where you installed the contents of portal2_dlc3
+echo Currently %dlcfolder%
 set /p Input=What is your dlc folder? : 
 del manager_config.txt
 echo  %Input% >> manager_config.txt
