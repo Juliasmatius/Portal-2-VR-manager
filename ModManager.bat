@@ -2,6 +2,11 @@
 
 REM I don't know how to code batch
 REM This is other peoples code and research glued together.
+if exist manager_config.txt (
+  rem This is a pass command
+) else (
+  echo portal2_dlc3 >> manager_config.txt
+)
 set /p dlcfolder=<manager_config.txt
 cd bin
 
