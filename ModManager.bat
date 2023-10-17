@@ -47,7 +47,7 @@ goto menu
 cd ..
 echo Your dlc folder is where you installed the contents of portal2_dlc3
 echo Currently %dlcfolder%
-echo Please include the whole folder name including portal2_dlc<number>
+echo "Please include the whole folder name including portal2_dlc<number>"
 echo Example : portal2_dlc3 
 echo NOT just 3
 set /p Input=What is your dlc folder? : 
